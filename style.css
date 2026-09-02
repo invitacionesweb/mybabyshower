@@ -1,0 +1,475 @@
+:root {
+    --color-0: #ffffff;
+    --color-1: #cddfeb;
+    --color-2: #f8f3ed;
+    --color-3: #95b4ce;
+    --font-principal: 'MiFuente';
+    --font-secundaria: 'MiFuente2';
+    --font-terciaria:'Schoolbell', cursive;
+    --font-cuarta:'Nunito Sans', sans-serif;
+}
+
+@font-face {
+    font-family: "MiFuente";
+    src: url("./WhisperMelodyLight-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "MiFuente2";
+    src: url("./BoulangerieCaps.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--color-0);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+/* ========================
+   BOTONES
+======================== */
+.boton {
+    border: 1px solid var(--color-1);
+    background-color: var(--color-1);
+    color: var(--color-0);
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: var(--font-terciaria);
+    border-radius: 50px;
+}
+
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: auto;
+    margin: auto;
+    padding: auto ;
+}
+/* ========================
+   AUDIO
+======================== */
+.audiodiv {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-1);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    z-index: 100;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+.audiodiv img {
+    padding: 3px 0 0 0;
+    margin: 0;
+    width: 60px;
+    height: 60px;
+}
+
+.play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Ocultar controles nativos del audio */
+audio::-webkit-media-controls,
+audio::-webkit-media-controls-panel,
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-start-playback-button,
+audio::-webkit-media-controls-enclosure,
+audio::-webkit-media-controls-current-time-display {
+    display: none !important;
+}
+
+/* ========================
+   BACKGROUND
+======================== */
+.background {
+    width: 100%;
+    height: 90vh;
+    background-image: url(./img-editable/BACKGROUND-TWO.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ========================
+   CONTADOR
+======================== */
+.titulocontador {
+    color: var(--color-3);
+    font-family: var(--font-principal);
+    text-align: center;
+    font-size: 2.6rem;
+    padding: 40px 0 0 0;
+    margin: 0;
+}
+
+.contador {
+    display: flex;
+    color: var(--color-3);
+    justify-content: center;
+    padding: 30px 0;
+    margin: 0;
+}
+
+.bloque {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.numero {
+    font-size: 4.6em;
+    font-weight: 200;
+    font-family: var(--font-secundaria);
+}
+
+.etiqueta {
+    font-size: 1.6em;
+    font-family: var(--font-principal);
+    padding: 0;
+    margin: 0;
+}
+
+/* ========================
+   DATOS UBICACIÓN
+======================== */
+.datos-ubicacion {
+    padding: 20px 0 60px 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: var(--color-0);
+    color: var(--color-3);
+    font-family: var(--font-terciaria);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.datos-ubicacion img {
+    
+    width: 180px;
+}
+
+.datos-ubicacion .fecha {
+    width: 100%;
+    max-width: 420px;
+}
+
+.datos-ubicacion .datos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+}
+
+.datos p {
+    font-size: 1.6rem;
+    padding: 0;
+    margin: 0 0 30px 0;
+    max-width: 320px;
+}
+
+/* ========================
+   FOTOS / fotos
+======================== */
+.fotos {
+    width: 100%;
+    height: 90vh;
+    background-image: url(./img-editable/textura1.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+}
+
+.fotos img {
+    width: 340px;
+    height: auto;
+    margin: auto;
+}
+
+.icono2 {
+    position: absolute;
+    top: -120px;
+    left: -40px;
+    z-index: 10;
+    padding: 5px;
+}
+
+.icono2 img {
+    width: 200px;
+}
+
+.icono3 {
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+    z-index: 10;
+}
+
+.icono3 img {
+    width: 160px;
+}
+
+/* ========================
+   FORMULARIO
+======================== */
+.forms {
+    text-align: center;
+    padding: 30px 0 30px 0;
+    background-image: url(./img-editable/textura3.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.forms img {
+    width: 40%;
+    margin: auto;
+}
+
+.forms p {
+    font-size: 1.6rem;
+    padding: 10px 0 ;
+    margin: 0;
+    font-family:var(--font-terciaria);
+    color: var(--color-3);
+}
+
+.formulario {
+    max-width: 500px;
+    width: 90vw;
+    color: var(--color-3);
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.formulario .formtitle {
+    font-family: var(--font-principal);
+    color: var(--color-3);
+    font-size: 2.6rem;
+    padding: 0;
+    margin: 0;
+}
+
+.radio-group {
+    display: flex;
+    font-family: var(--font-principal);
+    align-items: center;
+    padding: 0 25%;
+    justify-content: start;
+    gap: 100px;
+    font-size: 1.2em;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-principal);
+    color: var(--color-3);
+    font-size: 1em;
+    gap: 6px;
+}
+
+.radio-option input[type="radio"] {
+    accent-color: var(--color-1);
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    background-color: var(--color-0);
+    border: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: var(--color-3);
+    width: 90%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    outline: 2px solid var(--color-1);
+    outline-offset: 0;
+}
+
+.formulario select option {
+    color: var(--color-3);
+}
+
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+    color: var(--color-3);
+    opacity: 1;
+}
+
+.formulario textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.forms .boton {
+    font-size: 1.4rem;
+    margin: auto;
+    width: auto;
+    font-family: var(--font-principal);
+}
+.regalo {
+    width: 100%;
+    height:auto;
+    background-image: url(./img-editable/textura3.png);
+    text-align: center;
+    padding: 60px 0;
+}
+.regalo h2 {
+    font-family: var(--font-principal);
+    color: var(--color-3);
+    font-size: 2.6rem;
+    padding: 0;
+    margin: 0;
+}
+.regalo p {
+    font-size: 1.6rem;
+    padding: 10px 0 ;
+    margin: auto;
+    max-width: 340px;
+    font-family:var(--font-terciaria);
+    color: var(--color-3);
+}
+/* ========================
+   END
+======================== */
+.end {
+    width: 100%;
+    height: auto;
+    color: var(--color-1);
+    text-align: center;
+    padding: 60px 0;
+}
+
+.end img {
+    width: 180px;
+    margin: auto;
+    padding: 0;
+}
+
+.end h2 {
+    font-family: var(--font-principal);
+    font-size: 3.2rem;
+    margin: auto;
+    max-width: 320px;
+    padding: 0;
+}
+
+.end p {
+    font-family: var(--font-terciaria);
+    color: var(--color-3);
+    font-size: 1.4rem;
+    margin: auto;
+    padding: 0;
+}
+
+/* ========================
+   FOOTER
+======================== */
+footer {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    background-color: var(--color-1);
+    color: var(--color-0);
+    font-family: var(--font-principal);
+    padding: 40px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+footer .contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer img {
+    width: 60px;
+}
+
+footer p {
+    font-family: var(--font-principal);
+}
+
+.contenido ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 0 20px 20px 20px;
+    margin: 0;
+}
+
+.contenido a {
+    color: var(--color-0);
+}
+
+.contenido a:hover {
+    color: var(--color-2);
+}
+
+#ubicacion-texto { /* el selector real del elemento que muestra este texto */
+  white-space: pre-line;
+}
+/* ========================
+   RESPONSIVE
+======================== */
+@media (max-width: 768px) {
+    .background {
+        height: 100vh;
+        background-image: url(./img-editable/BACKGROUND.ONE.png);
+    }
+
+    .datos-ubicacion .datos {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .fotos {
+        height: 72vh;
+    }
+}
