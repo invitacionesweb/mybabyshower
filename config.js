@@ -23,7 +23,7 @@ textoUbicacion2: "",
   textoForm: "Tu presencia es lo más importante",
   textoFormSub: "No olvides confirmar asistencia con mis papis para una mejor organización",
   maxInvitados: 5,
-  scriptFormUrl: "",
+  scriptFormUrl: "https://script.google.com/macros/s/AKfycbwQ6r2R3NxJV0qg-KmHrzCX5-EXCLwitdgPKzXx2XpcpEPIgVKth4iYOvQzKgbYgC7bNg/exec",
 
   // --- AUDIO ---
   archivoAudio: "./YouAreMySunshine.mp3",
